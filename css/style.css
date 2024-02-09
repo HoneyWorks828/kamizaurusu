@@ -1,0 +1,460 @@
+@charset "UTF-8";
+
+html{
+    font-size: 100%;
+}
+
+body{
+    color: rgb(206,206,206);
+    background-color: black;
+    font-family: 'Abril Fatface', 'Libre Baskerville','Noto Sans JP', serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.unders {
+    text-align: center; /* 中央揃え */
+}
+
+.under {
+    margin-top: -25px;
+    display: inline-block; /* 画像を横に並べる */
+    vertical-align: top; /* 画像を上揃えにする */
+    width: 70px;
+}
+.title-deco{
+    height: 1rem;
+    margin: 25px 9px 0;
+
+}
+h1{
+    color: rgb(157,150,46);
+    position: relative; /* z-indexを適用するために必要 */
+    z-index: 1; /* 他の要素よりも背面に配置 */
+}
+p{
+    font-size: 0.8rem;
+    font-family: 'Libre Baskerville','Noto Sans JP', serif;
+    font-weight: lighter;
+}
+
+/* 最後の画像の右マージンを削除する */
+.under:last-child {
+    margin-right: 0;
+}
+
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ヘッダー始め */
+.logo{
+    width: 210px;
+    margin-top: 10px;
+}
+.main-nav{
+    display: flex;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-top: 54px;
+    padding-right: 35px;
+    list-style: none;
+    color: rgb(205,205,205);
+}
+.main-nav li{
+    margin: 0 10px 0 10px;
+    display: flex; /* flexboxを使用してアイコンとテキストを横並びにする */
+    align-items: center; /* アイコンとテキストを中央揃えにする */
+}
+.main-nav li img.mini-icon {
+    margin-right: 4px; /* アイコンとテキストの間隔 */
+    width: 24px; /* アイコンの幅 */
+    height: 24px; /* アイコンの高さ */
+}
+
+.main-nav a:hover{
+    color: rgb(157,151,94)
+}
+.page-header{
+    border-width: thin;
+    border-top-style: solid;
+    border-top-color: rgb(80,80,80);
+    padding: 0 13px 0 13px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
+/* モバイル始め */
+@media(max-width: 700px){
+    .logo{
+        width: 280px;
+        margin-top: 10px;
+    }
+    .main-nav{
+        display: flex;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        margin-top: 10px;
+        padding-right: 35px;
+        list-style: none;
+    }
+    .main-nav li{
+        margin: 0 10px 0 10px;
+    }
+    .main-nav a:hover{
+        color: rgb(157,151,94);;
+    }
+    .page-header{
+        padding: 0 13px 0 13px;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* モバイル終わり */
+/* ヘッダー終わり */
+
+
+/*Philosophy始め*/
+.philosophy{
+    border-width: thin;
+    border-top-style: solid;
+    border-top-color: rgb(80,80,80);
+    background: url(../images/bg_1.jpeg) no-repeat center/cover;
+    padding: 2% 5% 2%;
+}
+.iconkami {
+    height: 55px;
+    width: auto;
+}
+.icon {
+    height: 55px;
+    width: auto;
+    object-fit: cover;
+}
+.philotext1{
+    background: linear-gradient(
+        rgba(255,255,255,0.7),
+        rgba(255,255,255,0.9)
+    );
+    border: 1px solid rgba(255,255,255,0.4);
+    border-right-color: rgba(255,255,255,0.2);
+    border-bottom-color: rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 3% 6% 4%;
+}
+#philosophy{
+    font-family: "Hiragino Mincho Pro", "MS Mincho", serif;
+    color: black;
+}
+.titles{
+    display: flex;
+    justify-content: left;
+    margin: 10px;
+}
+
+
+@media(max-width: 700px){
+    .titles{
+        height: 70px;
+        width: auto;
+        object-fit: cover;
+    }
+    .icon {
+        height: 70px;
+        width: auto;
+        object-fit: cover;
+    }
+    .iconkami {
+        height: 70px;
+        width: auto;
+    }
+}
+/*Philosophy終わり*/
+
+/*News始め*/
+#news{
+    padding: 4% 5% 4%;
+    background-color: black;
+    border-width: thin;
+    border-top-style: solid;
+    border-top-color: rgb(80,80,80)
+}
+a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .news-items {
+    margin: 0 auto;
+  }
+  
+  .news-item {
+    display: flex;
+    padding: 20px 0 12px;
+  }
+  
+  .news-item:not(:first-child){
+    border-top: 1px solid #ddd;
+  }
+  
+  .news-head {
+    display: flex;
+    width: 200px;
+  }
+  
+  .news-date {
+    width: 110px;
+    padding-top: 3px;
+  }
+  
+  .news-label a {
+    display: block;
+    width: 90px;
+    height: 32px;
+    line-height: 32px;
+    color: rgb(91,91,91);
+    background: white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 1px;
+  }
+  
+  .news-title {
+    width: calc(100% - 200px);
+    padding-left: 30px;
+    padding-top: 3px;
+    line-height: 1.5;
+  }
+  
+  @media(max-width: 700px){
+    .news-item {
+      display: block;
+    }
+  
+    .news-title {
+      width: 100%;
+      padding-left: 0;
+      padding-top: 0;
+      margin-top: 10px;
+    }
+  }
+/*News終わり*/
+
+
+
+/*Price始め*/
+#price{
+    padding-top: 4%;
+    background-color: black;
+    border-width: thin;
+    border-top-style: solid;
+    border-top-color: rgb(80,80,80)
+}
+.price-yen{
+    margin-top: 9px;
+}
+.menu-text0{
+    padding: 1rem 0 1rem;
+    font-size: 1rem;
+}
+.icon1 {
+    position: relative; /* z-indexを適用するために必要 */
+    z-index: 1; /* 他の要素よりも背面に配置 */
+    height: 40px;
+    width: auto;
+    object-fit: cover;
+}
+.price-title{
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin: 15px;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+    padding: 2rem;
+}
+.menu {
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    text-transform: uppercase;
+}
+.titles-pri{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.menu-text{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.9rem;
+    margin: 0.5rem;
+}
+.hair-style{
+    margin-top: 10px;
+}
+
+@media(max-width: 700px){
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-left: -3%;
+        margin-right: -3%;
+    }
+    .menu {
+        overflow: hidden;
+        font-size: 15px;
+
+    }
+    .menu img {
+        max-width: 100%;
+        height: auto;
+    }
+    .menu-text{
+        margin: 20px 0px 20px;
+    }
+}
+/*Price終わり*/
+
+
+/*Staff始め*/
+#staff{
+    padding-top: 4%;
+    background-color: black;
+    border-width: thin;
+    border-top-style: solid;
+    border-top-color: rgb(80,80,80)
+}
+.container-staff {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 0 calc(50% - 50vw);
+    width: 100vw;
+}
+.staff-text0{
+    font-size: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    padding: 4%;
+}
+@media(max-width: 700px){
+    .container-staff {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+/*Staff終わり*/
+
+/*Access始め*/
+#access {
+    padding-top: 4%;
+    background-color: black;
+    border-width: thin;
+    border-top: solid rgb(80,80,80);
+}
+
+.container-map {
+    display: flex;
+    border-top: solid;
+    border-bottom: solid;
+    border-color: rgb(219, 219, 219);
+}
+
+.map,
+.info {
+    flex-basis: 50%; /* これにより、mapとinfo要素の幅をコンテナの半分に設定します */
+    flex-grow: 1;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.info {
+    background-color: #333;
+    color: #fff;
+}
+
+.info h2 {
+    margin-top: 0;
+}
+
+.info p {
+    margin: 10px 0;
+}
+
+.info {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(157,151,94);
+    color: #333;
+    text-decoration: none;
+}
+.access-text{
+    font-size: 1rem;
+    color: white;
+    padding-top: 2rem;
+
+}
+
+@media (max-width: 700px) {
+    .container-map {
+        flex-direction: column; /* 要素を縦に並べる */
+    }
+    
+    .map,
+    .info {
+        width: 100%; /* 要素の幅をビューポートの幅に合わせる */
+        box-sizing: border-box; /* パディングとボーダーを幅に含める */
+    }
+
+    .map iframe {
+        height:400px; /* iframeの高さを適切な値に設定 */
+
+    }
+    .info{
+        margin-top: -7px;
+    }
+}
+/*Access終わり*/
+
+/*Footer初め*/
+.footer{
+    border-top: rgb(80,80,80) solid 1px;
+}
+.footer-content{
+    margin: 1rem;
+}
+.copyright{
+    font-size: 1rem;
+    text-align: center;
+}
+.footer-main{
+    background-image: url(../images/bg_main.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 75% 0;
+    margin-bottom: 5%;
+  }
+  .footer-nav a:hover{
+    color: rgb(157,151,94)
+}
+
+/*Footer終わり*/
